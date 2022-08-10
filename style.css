@@ -1,3 +1,7 @@
+* {
+   box-sizing: border-box;
+}
+
 body {
    background-color: #e5e5e5;
    font-family: "Roboto", sans-serif;
@@ -5,7 +9,7 @@ body {
 
 .box {
    width: 100%;
-   height: 100%;
+   margin: 0 auto;
 }
 
 .top-menu {
@@ -18,9 +22,12 @@ body {
    justify-content: center;
    margin-bottom: 31px;
 
+   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
    position: sticky;
    top: 0;
    left: 0;
+   z-index: 1;
 }
 
 .top-menu h1 {
@@ -40,7 +47,7 @@ body {
 }
 
 .main-content {
-   background-color: grey;
+   background-color: #e5e5e5;
    height: 100%;
    width: 100%;
 }
@@ -56,14 +63,79 @@ body {
 }
 
 .selection {
-   overflow-x: scroll; /*CONFERIR COMO CONFIGURAR PARA SUMIR O SCROLL*/
+   overflow-x: auto; /*CONFERIR COMO CONFIGURAR PARA SUMIR O SCROLL*/
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
 }
 
 .single-selection {
-   background-color: green;
+   background-color: #ffffff;
    width: 172px;
-   height: 216px;
+   padding: 18px 13px 16px 13px;
    margin-bottom: 27px;
+   margin-right: 16px;
+   border-radius: 9px;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around; /* vertical */
+   align-items: left; /* horizontal */
+}
+
+.imagem {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+   width: 144px;
+   height: 87px;
+   border-radius: 4px;
+   margin-bottom: 8px;
+   object-fit: fill;
+}
+
+.imagem img {
+   width: 100%;
+   object-fit: fill;
+}
+
+.text {
+   display: flex;
+   flex-direction: column;
+   width: 139px;
+}
+
+.single-selection h4 {
+   font-weight: 700;
+   font-size: 16px;
+   line-height: 19px;
+   margin-bottom: 8px;
+   width: 139px;
+   height: 27px;
+
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+
+.single-selection h5 {
+   font-weight: 300;
+   font-size: 15px;
+   line-height: 18px;
+   color: rgb(166, 166, 166);
+
+   width: 139px;
+   height: 40px;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+
+.single-selection h6 {
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 19px;
+   margin-top: 10px;
 }
 
 .drink {
@@ -75,21 +147,28 @@ body {
 }
 
 .bottom-menu {
-   background-color: aquamarine;
+   background-color: #ffffff;
    height: 90px;
-   width: 100%;
    display: flex;
+   flex-direction: column;
    align-items: center;
    justify-content: center;
 
-   position: fixed;
+   position: sticky;
    bottom: 0;
    left: 0;
+   z-index: 1;
 }
 
 .bottom-menu button {
+   background-color: rgb(203, 203, 203);
    width: 364px;
    height: 61px;
    border: none;
    border-radius: 50px;
+
+   font-size: 20px;
+   font-weight: 400;
+   line-height: 23.5px;
+   text-align: center;
 }

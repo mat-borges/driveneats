@@ -1,0 +1,95 @@
+body {
+   background-color: #e5e5e5;
+   font-family: "Roboto", sans-serif;
+}
+
+.box {
+   width: 100%;
+   height: 100%;
+}
+
+.top-menu {
+   background-color: red;
+   height: 90px;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: left;
+   justify-content: center;
+   margin-bottom: 31px;
+
+   position: sticky;
+   top: 0;
+   left: 0;
+}
+
+.top-menu h1 {
+   font-family: "Righteous", cursive;
+   margin-left: 21px;
+   color: #ffffff;
+   font-size: 44px;
+   line-height: 55px;
+}
+
+.top-menu h2 {
+   margin-left: 21px;
+   color: #ffffff;
+   font-weight: 400;
+   font-size: 18px;
+   line-height: 21px;
+}
+
+.main-content {
+   background-color: grey;
+   height: 100%;
+   width: 100%;
+}
+
+.main-content h3 {
+   font-family: "Righteous", cursive;
+   margin-bottom: 17px;
+   font-size: 26px;
+}
+
+.main-meal {
+   margin-left: 21px;
+}
+
+.selection {
+   overflow-x: scroll; /*CONFERIR COMO CONFIGURAR PARA SUMIR O SCROLL*/
+}
+
+.single-selection {
+   background-color: green;
+   width: 172px;
+   height: 216px;
+   margin-bottom: 27px;
+}
+
+.drink {
+   margin-left: 21px;
+}
+
+.dessert {
+   margin-left: 21px;
+}
+
+.bottom-menu {
+   background-color: aquamarine;
+   height: 90px;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   position: fixed;
+   bottom: 0;
+   left: 0;
+}
+
+.bottom-menu button {
+   width: 364px;
+   height: 61px;
+   border: none;
+   border-radius: 50px;
+}

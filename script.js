@@ -6,7 +6,7 @@ let textMeal = 0;
 let textDrink = 0;
 let textDessert = 0;
 
-function selectMeal(mealClass) {
+function selectMeal(selection) {
    const buttonMeal = document.querySelector(".main-meal .selected");
 
    if (buttonMeal !== null) {
@@ -14,36 +14,36 @@ function selectMeal(mealClass) {
       selecao--;
    }
 
-   const selector = document.querySelector(mealClass);
+   const selector = document.querySelector(selection);
    selector.classList.add("selected");
 
-   const getPriceMeal = document.querySelector(mealClass + " .valor");
+   const getPriceMeal = document.querySelector(selection + " .valor");
    priceMeal = Number(getPriceMeal.innerHTML);
 
-   const getTextMeal = document.querySelector(mealClass + " h4");
+   const getTextMeal = document.querySelector(selection + " h4");
    textMeal = getTextMeal.innerHTML;
    console.log(textMeal);
 
    selecao++;
    if (selecao === 3) {
       const fimPedido = document.querySelector(".bottom-menu h6");
-      fimPedido.classList.add("completo");
+      fimPedido.classList.add("completed");
       fimPedido.innerHTML = "Fechar pedido";
    }
 }
 
-function checkMeal(checkMClass) {
+function checkMeal(selection) {
    const mealCheck = document.querySelector(".main-meal .show");
 
    if (mealCheck !== null) {
       mealCheck.classList.remove("show");
    }
 
-   const selectorC = document.querySelector(checkMClass);
+   const selectorC = document.querySelector(selection);
    selectorC.classList.add("show");
 }
 
-function selectDrink(drinkClass) {
+function selectDrink(selection) {
    const buttonDrink = document.querySelector(".drink .selected");
 
    if (buttonDrink !== null) {
@@ -51,14 +51,14 @@ function selectDrink(drinkClass) {
       selecao--;
    }
 
-   const selector = document.querySelector(drinkClass);
+   const selector = document.querySelector(selection);
    selector.classList.add("selected");
 
-   const getPriceDrink = document.querySelector(drinkClass + " .valor");
+   const getPriceDrink = document.querySelector(selection + " .valor");
    priceDrink = Number(getPriceDrink.innerHTML);
 
-   const getTextDrink = document.querySelector(drinkClass + " h4");
-   const getTextDrink2 = document.querySelector(drinkClass + " h5");
+   const getTextDrink = document.querySelector(selection + " h4");
+   const getTextDrink2 = document.querySelector(selection + " h5");
    textDrink = getTextDrink.innerHTML + " (" + getTextDrink2.innerHTML + ")";
 
    console.log(textDrink);
@@ -66,23 +66,23 @@ function selectDrink(drinkClass) {
    selecao++;
    if (selecao === 3) {
       const fimPedido = document.querySelector(".bottom-menu h6");
-      fimPedido.classList.add("completo");
+      fimPedido.classList.add("completed");
       fimPedido.innerHTML = "Fechar pedido";
    }
 }
 
-function checkDrink(checkDClass) {
+function checkDrink(selection) {
    const drinkCheck = document.querySelector(".drink .show");
 
    if (drinkCheck !== null) {
       drinkCheck.classList.remove("show");
    }
 
-   const selectorC = document.querySelector(checkDClass);
+   const selectorC = document.querySelector(selection);
    selectorC.classList.add("show");
 }
 
-function selectDessert(dessertClass) {
+function selectDessert(selection) {
    const buttonDessert = document.querySelector(".dessert .selected");
 
    if (buttonDessert !== null) {
@@ -90,36 +90,36 @@ function selectDessert(dessertClass) {
       selecao--;
    }
 
-   const selector = document.querySelector(dessertClass);
+   const selector = document.querySelector(selection);
    selector.classList.add("selected");
 
-   const getPriceDessert = document.querySelector(dessertClass + " .valor");
+   const getPriceDessert = document.querySelector(selection + " .valor");
    priceDessert = Number(getPriceDessert.innerHTML);
 
-   const getTextDessert = document.querySelector(dessertClass + " h4");
+   const getTextDessert = document.querySelector(selection + " h4");
    textDessert = getTextDessert.innerHTML;
    console.log(textDessert);
 
    selecao++;
    if (selecao === 3) {
       const fimPedido = document.querySelector(".bottom-menu h6");
-      fimPedido.classList.add("completo");
+      fimPedido.classList.add("completed");
       fimPedido.innerHTML = "Fechar pedido";
    }
 }
 
-function checkDessert(checkDClass) {
+function checkDessert(selection) {
    const dessertCheck = document.querySelector(".dessert .show");
 
    if (dessertCheck !== null) {
       dessertCheck.classList.remove("show");
    }
 
-   const selectorC = document.querySelector(checkDClass);
+   const selectorC = document.querySelector(selection);
    selectorC.classList.add("show");
 }
 
-function finalizarPedido() {
+function endOrder() {
    if (selecao === 3) {
       const nome = prompt("Informe seu nome:");
       const endereco = prompt("Informe seu endereço");
@@ -129,22 +129,13 @@ function finalizarPedido() {
       urlWpp =
          "https://wa.me/5519997403626?text=" +
          encodeURIComponent(
-            "Olá, gostaria de fazer o pedido: \n" +
-               " - Prato:  " +
-               textMeal +
-               "\n" +
-               " - Bebida:  " +
-               textDrink +
-               "\n" +
-               " - Sobremesa:  " +
-               textDessert +
-               "\n" +
-               "Total: R$ " +
-               totalPrice.toFixed(2) +
-               "\n \nNome:  " +
-               nome +
-               "\nEndereço:   " +
-               endereco
+            `Olá, gostaria de fazer o pedido: \n` +
+               ` - Prato:  ${textMeal} \n` +
+               ` - Bebida:  ${textDrink} \n` +
+               ` - Sobremesa:  ${textDessert} \n` +
+               `Total: R$ ${totalPrice.toFixed(2)} \n\n` +
+               `Nome:  ${nome} \n` +
+               `Endereço:  ${endereco}`
          );
 
       window.open(urlWpp);

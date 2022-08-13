@@ -8,8 +8,11 @@ body {
 }
 
 .box {
-   width: 100%;
+   width: 100vw;
+   height: 100vh;
    margin: 0 auto;
+
+   position: relative;
 }
 
 .top-menu {
@@ -201,7 +204,101 @@ body {
    filter: brightness(105%);
 }
 
-.bottom-menu .completo {
+.bottom-menu .completed {
    background-color: #32b72f;
    font-weight: 700;
+}
+
+.big-confirmation {
+   background-color: rgba(238, 238, 238, 0.8);
+   width: 100%;
+   height: 125%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 5;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.confirmation-box {
+   background-color: #32b72f;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   color: white;
+   border-radius: 9px;
+   filter: drop-shadow(0 0 10px #000000);
+
+   padding: 0 25px;
+
+   max-width: 500px;
+   max-height: 400px;
+
+   width: 80%;
+   height: 50%;
+}
+
+.confirmation-box h1 {
+   font-weight: 700;
+   font-size: 22px;
+   text-align: center;
+   margin-top: 25px;
+}
+
+.confirmation-box span {
+   font-weight: 400;
+   font-size: 22px;
+}
+
+.check-order {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.check-order h6 {
+   background-color: white;
+   color: #32b72f;
+   width: 330px;
+   height: 55px;
+   border-radius: 100px;
+   text-align: center;
+   font-weight: 700;
+   font-size: 22px;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.hide {
+   display: none;
+}
+
+.cancel-order {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   margin: 10px 0;
+}
+
+.cancel-order h6 {
+   width: 330px;
+   height: 50px;
+   border-radius: 100px;
+   text-align: center;
+   font-weight: 700;
+   font-size: 20px;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.hide {
+   display: none;
 }

@@ -24,7 +24,7 @@
    </head>
 
    <body>
-      <div class="box">
+      <div class="box translucid">
          <div class="top-menu">
             <h1>DrivenEats</h1>
             <h2>Sua comida em 6 minutos</h2>
@@ -340,8 +340,24 @@
          </div>
          <!--fim div main-content-->
          <div class="bottom-menu">
-            <div class="finalizar" onclick="finalizarPedido()">
+            <div onclick="endOrder()">
                <h6 class="">Selecione os 3 itens para fechar o pedido</h6>
+            </div>
+         </div>
+      </div>
+      <!--fim div box-->
+
+      <div class="big-confirmation hide">
+         <div class="confirmation-box">
+            <h1>Confirme seu pedido</h1>
+            <span>Text</span>
+            <div class="bottom-confirmation">
+               <div class="check-order">
+                  <h6 class="confirm-text">Tudo certo, pode pedir!</h6>
+               </div>
+               <div class="cancel-order">
+                  <h6 class="confirm-text">Cancelar</h6>
+               </div>
             </div>
          </div>
       </div>

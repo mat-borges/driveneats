@@ -22,7 +22,6 @@ function selectMeal(selection) {
 
    const getTextMeal = document.querySelector(selection + " h4");
    textMeal = getTextMeal.innerHTML;
-   console.log(textMeal);
 
    selecao++;
    if (selecao === 3) {
@@ -61,8 +60,6 @@ function selectDrink(selection) {
    const getTextDrink2 = document.querySelector(selection + " h5");
    textDrink = getTextDrink.innerHTML + " (" + getTextDrink2.innerHTML + ")";
 
-   console.log(textDrink);
-
    selecao++;
    if (selecao === 3) {
       const fimPedido = document.querySelector(".bottom-menu h6");
@@ -98,7 +95,6 @@ function selectDessert(selection) {
 
    const getTextDessert = document.querySelector(selection + " h4");
    textDessert = getTextDessert.innerHTML;
-   console.log(textDessert);
 
    selecao++;
    if (selecao === 3) {
@@ -121,23 +117,46 @@ function checkDessert(selection) {
 
 function endOrder() {
    if (selecao === 3) {
-      const nome = prompt("Informe seu nome:");
-      const endereco = prompt("Informe seu endereço");
+      const totalPrice = (priceMeal + priceDrink + priceDessert).toFixed(2);
+      const confText = document.querySelector(".texto-confirmacao span");
+      const confPrice = document.querySelector(".texto-confirmacao p");
 
-      const totalPrice = priceMeal + priceDrink + priceDessert;
+      confText.innerHTML = `${textMeal} </br></br> ${textDrink} </br></br> ${textDessert} </br></br> <strong>TOTAL</strong>`;
+      confPrice.innerHTML = `R$ ${priceMeal.toFixed(
+         2
+      )} </br></br> R$ ${priceDrink.toFixed(
+         2
+      )} </br></br> R$ ${priceDessert.toFixed(
+         2
+      )} </br></br> <strong>R$ ${totalPrice}</strong>`;
 
-      urlWpp =
-         "https://wa.me/5519997403626?text=" +
-         encodeURIComponent(
-            `Olá, gostaria de fazer o pedido: \n` +
-               ` - Prato:  ${textMeal} \n` +
-               ` - Bebida:  ${textDrink} \n` +
-               ` - Sobremesa:  ${textDessert} \n` +
-               `Total: R$ ${totalPrice.toFixed(2)} \n\n` +
-               `Nome:  ${nome} \n` +
-               `Endereço:  ${endereco}`
-         );
-
-      window.open(urlWpp);
+      const confirmation = document.querySelector(".big-confirmation");
+      confirmation.classList.remove("hide");
    }
+}
+
+function fimPedido() {
+   const nome = prompt("Informe seu nome:");
+   const endereco = prompt("Informe seu endereço");
+
+   const totalPrice = priceMeal + priceDrink + priceDessert;
+
+   urlWpp =
+      "https://wa.me/5519997403626?text=" +
+      encodeURIComponent(
+         `Olá, gostaria de fazer o pedido: \n` +
+            ` - Prato:  ${textMeal} \n` +
+            ` - Bebida:  ${textDrink} \n` +
+            ` - Sobremesa:  ${textDessert} \n` +
+            `Total: R$ ${totalPrice.toFixed(2)} \n\n` +
+            `Nome:  ${nome} \n` +
+            `Endereço:  ${endereco}`
+      );
+
+   window.open(urlWpp);
+}
+
+function cancel() {
+   const confirmation = document.querySelector(".big-confirmation");
+   confirmation.classList.add("hide");
 }

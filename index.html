@@ -350,12 +350,15 @@
       <div class="big-confirmation hide">
          <div class="confirmation-box">
             <h1>Confirme seu pedido</h1>
-            <span>Text</span>
+            <div class="texto-confirmacao">
+               <span>Text</span>
+               <p>Valor</p>
+            </div>
             <div class="bottom-confirmation">
-               <div class="check-order">
+               <div class="check-order" onclick="fimPedido()">
                   <h6 class="confirm-text">Tudo certo, pode pedir!</h6>
                </div>
-               <div class="cancel-order">
+               <div class="cancel-order" onclick="cancel()">
                   <h6 class="confirm-text">Cancelar</h6>
                </div>
             </div>

@@ -1,371 +1,244 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>projeto3-DrivenEats</title>
-      <link rel="stylesheet" href="reset.css" />
-      <link rel="stylesheet" href="style.css" />
-      <script
-         type="module"
-         src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
-      ></script>
-      <script
-         nomodule=""
-         src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
-      ></script>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>projeto3-DrivenEats</title>
+		<link rel="stylesheet" href="reset.css" />
+		<link rel="stylesheet" href="style.css" />
+		<script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
 
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link
-         href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap"
-         rel="stylesheet"
-      />
-   </head>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
 
-   <body>
-      <div class="box translucid">
-         <div class="top-menu">
-            <h1>DrivenEats</h1>
-            <h2>Sua comida em 6 minutos</h2>
-         </div>
-         <div class="main-content">
-            <div class="main-meal">
-               <h3>Primeiro seu prato</h3>
-               <div class="selection">
-                  <div
-                     class="single-selection m1"
-                     onclick="selectMeal('.m1'); checkMeal('.mc1');"
-                  >
-                     <div class="imagem">
-                        <img src="media/frango_yin_yang.png" />
-                     </div>
-                     <div class="text">
-                        <h4>Frango Yin Yang</h4>
-                        <h5>Com batata frita, salada e molho</h5>
-                        <h6>R$ <span class="valor">14.90</span></h6>
-                     </div>
-                     <ion-icon
-                        name="checkmark-circle"
-                        class="check mc1"
-                     ></ion-icon>
-                  </div>
-                  <!--fim div single-selection-->
-                  <div
-                     class="single-selection m2"
-                     onclick="selectMeal('.m2'); checkMeal('.mc2');"
-                  >
-                     <div class="imagem">
-                        <img src="media/file-a-parmeggiana.jpg" />
-                     </div>
-                     <div class="text">
-                        <h4>Filé à parmegiana</h4>
-                        <h5>Com arroz e batata frita</h5>
-                        <h6>R$ <span class="valor">15.90</span></h6>
-                     </div>
-                     <ion-icon
-                        name="checkmark-circle"
-                        class="check mc2"
-                     ></ion-icon>
-                  </div>
-                  <!--fim div single-selection-->
-                  <div
-                     class="single-selection m3"
-                     onclick="selectMeal('.m3'); checkMeal('.mc3');"
-                  >
-                     <div class="imagem"><img src="media/spaghetti.jpg" /></div>
-                     <div class="text">
-                        <h4>Espaguete</h4>
-                        <h5>Com almôndegas e salada</h5>
-                        <h6>R$ <span class="valor">12.90</span></h6>
-                     </div>
-                     <ion-icon
-                        name="checkmark-circle"
-                        class="check mc3"
-                     ></ion-icon>
-                  </div>
-                  <!--fim div single-selection-->
-                  <div
-                     class="single-selection m4"
-                     onclick="selectMeal('.m4'); checkMeal('.mc4');"
-                  >
-                     <div class="imagem">
-                        <img src="media/feijoada.jpeg" />
-                     </div>
-                     <div class="text">
-                        <h4>Feijoada</h4>
-                        <h5>Com arroz, couve, torresmo e farofa</h5>
-                        <h6>R$ <span class="valor">19.90</span></h6>
-                     </div>
-                     <ion-icon
-                        name="checkmark-circle"
-                        class="check mc4"
-                     ></ion-icon>
-                  </div>
-                  <!--fim div single-selection-->
-                  <div
-                     class="single-selection m5"
-                     onclick="selectMeal('.m5'); checkMeal('.mc5');"
-                  >
-                     <div class="imagem">
-                        <img src="media/berinjela_parmegiana.jpg" />
-                     </div>
-                     <div class="text">
-                        <h4>Berinjela à parmegiana</h4>
-                        <h5>Com arroz e salada</h5>
-                        <h6>R$ <span class="valor">13.90</span></h6>
-                     </div>
-                     <ion-icon
-                        name="checkmark-circle"
-                        class="check mc5"
-                     ></ion-icon>
-                  </div>
-                  <!--fim div single-selection-->
-               </div>
-               <!--fim div selection-->
-            </div>
-            <!--fim div main-meal-->
-            <div class="drink">
-               <h3>Agora, sua bebida</h3>
-               <div class="selection">
-                  <div
-                     class="single-selection dk1"
-                     onclick="selectDrink('.dk1'); checkDrink('.dkc1')"
-                  >
-                     <div class="imagem">
-                        <img src="media/coquinha_gelada.png" />
-                     </div>
-                     <div class="text">
-                        <h4>Coca-Cola</h4>
-                        <h5>Lata 350 ml</h5>
-                        <h6>R$ <span class="valor">4.90</span></h6>
-                     </div>
-                     <ion-icon
-                        name="checkmark-circle"
-                        class="check dkc1"
-                     ></ion-icon>
-                  </div>
-                  <!--fim div single-selection-->
-                  <div
-                     class="single-selection dk2"
-                     onclick="selectDrink('.dk2'); checkDrink('.dkc2')"
-                  >
-                     <div class="imagem">
-                        <img src="media/kuat.jpg" />
-                     </div>
-                     <div class="text">
-                        <h4>Kuat</h4>
-                        <h5>Lata 350 ml</h5>
-                        <h6>R$ <span class="valor">4.90</span></h6>
-                     </div>
-                     <ion-icon
-                        name="checkmark-circle"
-                        class="check dkc2"
-                     ></ion-icon>
-                  </div>
-                  <!--fim div single-selection-->
-                  <div
-                     class="single-selection dk3"
-                     onclick="selectDrink('.dk3'); checkDrink('.dkc3')"
-                  >
-                     <div class="imagem">
-                        <img src="media/fanta-laranja.jpg" />
-                     </div>
-                     <div class="text">
-                        <h4>Fanta Laranja</h4>
-                        <h5>Lata 350 ml</h5>
-                        <h6>R$ <span class="valor">4.90</span></h6>
-                     </div>
-                     <ion-icon
-                        name="checkmark-circle"
-                        class="check dkc3"
-                     ></ion-icon>
-                  </div>
-                  <!--fim div single-selection-->
-                  <div
-                     class="single-selection dk4"
-                     onclick="selectDrink('.dk4'); checkDrink('.dkc4')"
-                  >
-                     <div class="imagem">
-                        <img src="media/fanta-uva.jpeg" />
-                     </div>
-                     <div class="text">
-                        <h4>Fanta Uva</h4>
-                        <h5>Lata 350 ml</h5>
-                        <h6>R$ <span class="valor">4.90</span></h6>
-                     </div>
-                     <ion-icon
-                        name="checkmark-circle"
-                        class="check dkc4"
-                     ></ion-icon>
-                  </div>
-                  <!--fim div single-selection-->
-                  <div
-                     class="single-selection dk5"
-                     onclick="selectDrink('.dk5'); checkDrink('.dkc5')"
-                  >
-                     <div class="imagem">
-                        <img src="media/laranja.jpg" />
-                     </div>
-                     <div class="text">
-                        <h4>Suco Laranja</h4>
-                        <h5>Copo 300ml</h5>
-                        <h6>R$ <span class="valor">5.90</span></h6>
-                     </div>
-                     <ion-icon
-                        name="checkmark-circle"
-                        class="check dkc5"
-                     ></ion-icon>
-                  </div>
-                  <!--fim div single-selection-->
-                  <div
-                     class="single-selection dk6"
-                     onclick="selectDrink('.dk6'); checkDrink('.dkc6')"
-                  >
-                     <div class="imagem">
-                        <img src="media/morango-com-laranja.jpg" />
-                     </div>
-                     <div class="text">
-                        <h4>Suco Morango com Laranja</h4>
-                        <h5>Copo 300ml</h5>
-                        <h6>R$ <span class="valor">7.90</span></h6>
-                     </div>
-                     <ion-icon
-                        name="checkmark-circle"
-                        class="check dkc6"
-                     ></ion-icon>
-                  </div>
-                  <!--fim div single-selection-->
-               </div>
-               <!--fim div selection-->
-            </div>
-            <!--fim div drink-->
-            <div class="dessert">
-               <h3>Por fim, sua sobremesa</h3>
-               <div class="selection">
-                  <div
-                     class="single-selection dss1"
-                     onclick="selectDessert('.dss1'); checkDessert('.dsc1')"
-                  >
-                     <div class="imagem">
-                        <img src="media/pudim.png" />
-                     </div>
-                     <div class="text">
-                        <h4>Pudim</h4>
-                        <h5>Apenas pudim</h5>
-                        <h6>R$ <span class="valor">7.90</span></h6>
-                     </div>
-                     <ion-icon
-                        name="checkmark-circle"
-                        class="check dsc1"
-                     ></ion-icon>
-                  </div>
-                  <!--fim div single-selection-->
-                  <div
-                     class="single-selection dss2"
-                     onclick="selectDessert('.dss2'); checkDessert('.dsc2')"
-                  >
-                     <div class="imagem">
-                        <img src="media/brigadeiro-de-colher.jpg" />
-                     </div>
-                     <div class="text">
-                        <h4>Brigadeiro de Colher</h4>
-                        <h5>Apenas brigadeiro</h5>
-                        <h6>R$ <span class="valor">5.90</span></h6>
-                     </div>
-                     <ion-icon
-                        name="checkmark-circle"
-                        class="check dsc2"
-                     ></ion-icon>
-                  </div>
-                  <!--fim div single-selection-->
-                  <div
-                     class="single-selection dss3"
-                     onclick="selectDessert('.dss3'); checkDessert('.dsc3')"
-                  >
-                     <div class="imagem">
-                        <img src="media/sorvete-de-chocolate.jpeg" />
-                     </div>
-                     <div class="text">
-                        <h4>Sorvete de Chocolate</h4>
-                        <h5>2 bolas de sorvete</h5>
-                        <h6>R$ <span class="valor">6.90</span></h6>
-                     </div>
-                     <ion-icon
-                        name="checkmark-circle"
-                        class="check dsc3"
-                     ></ion-icon>
-                  </div>
-                  <!--fim div single-selection-->
-                  <div
-                     class="single-selection dss4"
-                     onclick="selectDessert('.dss4'); checkDessert('.dsc4')"
-                  >
-                     <div class="imagem">
-                        <img src="media/sorvete-de-baunilha.jpg" />
-                     </div>
-                     <div class="text">
-                        <h4>Sorvete de Baunilha</h4>
-                        <h5>2 bolas de sorvete</h5>
-                        <h6>R$ <span class="valor">6.90</span></h6>
-                     </div>
-                     <ion-icon
-                        name="checkmark-circle"
-                        class="check dsc4"
-                     ></ion-icon>
-                  </div>
-                  <!--fim div single-selection-->
-                  <div
-                     class="single-selection dss5"
-                     onclick="selectDessert('.dss5'); checkDessert('.dsc5')"
-                  >
-                     <div class="imagem">
-                        <img src="media/salada-de-frutas.jpg" />
-                     </div>
-                     <div class="text">
-                        <h4>Salada de Frutas</h4>
-                        <h5>Banana, morango, uva e manga</h5>
-                        <h6>R$ <span class="valor">7.90</span></h6>
-                     </div>
-                     <ion-icon
-                        name="checkmark-circle"
-                        class="check dsc5"
-                     ></ion-icon>
-                  </div>
-                  <!--fim div single-selection-->
-               </div>
-               <!--fim div selection-->
-            </div>
-            <!--fim div dessert-->
-         </div>
-         <!--fim div main-content-->
-         <div class="bottom-menu">
-            <div onclick="endOrder()">
-               <h6 class="">Selecione os 3 itens para fechar o pedido</h6>
-            </div>
-         </div>
-      </div>
-      <!--fim div box-->
+	<body>
+		<div class="box translucid">
+			<div class="top-menu">
+				<h1>DrivenEats</h1>
+				<h2>Sua comida em 6 minutos</h2>
+			</div>
+			<div class="main-content">
+				<div class="main-meal">
+					<h3>Primeiro seu prato</h3>
+					<div class="selection">
+						<div class="single-selection m1" onclick="selectMeal('.m1'); checkMeal('.mc1');">
+							<div class="imagem">
+								<img src="media/frango_yin_yang.png" / alt="Ilustração do prato frango_yin_yang">
+							</div>
+							<div class="text">
+								<h4>Frango Yin Yang</h4>
+								<h5>Com batata frita, salada e molho</h5>
+								<h6>R$ <span class="valor">14.90</span></h6>
+							</div>
+							<ion-icon name="checkmark-circle" class="check mc1"></ion-icon>
+						</div> <!-- fim div single-selection -->
+						<div class="single-selection m2" onclick="selectMeal('.m2'); checkMeal('.mc2');">
+							<div class="imagem">
+								<img src="media/file-a-parmeggiana.jpg" / alt="Ilustração do prato file-a-parmeggiana">
+							</div>
+							<div class="text">
+								<h4>Filé à parmegiana</h4>
+								<h5>Com arroz e batata frita</h5>
+								<h6>R$ <span class="valor">15.90</span></h6>
+							</div>
+							<ion-icon name="checkmark-circle" class="check mc2"></ion-icon>
+						</div> <!-- fim div single-selection -->
+						<div class="single-selection m3" onclick="selectMeal('.m3'); checkMeal('.mc3');">
+							<div class="imagem"><img src="media/spaghetti.jpg" /></div alt="">
+							<div class="text">
+								<h4>Espaguete</h4>
+								<h5>Com almôndegas e salada</h5>
+								<h6>R$ <span class="valor">12.90</span></h6>
+							</div>
+							<ion-icon name="checkmark-circle" class="check mc3"></ion-icon>
+						</div> <!-- fim div single-selection -->
+						<div class="single-selection m4" onclick="selectMeal('.m4'); checkMeal('.mc4');">
+							<div class="imagem">
+								<img src="media/feijoada.jpeg" / alt="Ilustração do prato feijoada">
+							</div>
+							<div class="text">
+								<h4>Feijoada</h4>
+								<h5>Com arroz, couve, torresmo e farofa</h5>
+								<h6>R$ <span class="valor">19.90</span></h6>
+							</div>
+							<ion-icon name="checkmark-circle" class="check mc4"></ion-icon>
+						</div> <!-- fim div single-selection -->
+						<div class="single-selection m5" onclick="selectMeal('.m5'); checkMeal('.mc5');">
+							<div class="imagem">
+								<img src="media/berinjela_parmegiana.jpg" / alt="Ilustração do prato berinjela_parmegiana">
+							</div>
+							<div class="text">
+								<h4>Berinjela à parmegiana</h4>
+								<h5>Com arroz e salada</h5>
+								<h6>R$ <span class="valor">13.90</span></h6>
+							</div>
+							<ion-icon name="checkmark-circle" class="check mc5"></ion-icon>
+						</div> <!-- fim div single-selection -->
+					</div> <!-- fim div selection -->
+				</div> <!-- fim div main-meal -->
+				<div class="drink">
+					<h3>Agora, sua bebida</h3>
+					<div class="selection">
+						<div class="single-selection dk1" onclick="selectDrink('.dk1'); checkDrink('.dkc1')">
+							<div class="imagem">
+								<img src="media/coquinha_gelada.png" / alt="Ilustração da bebida Coca-Cola">
+							</div>
+							<div class="text">
+								<h4>Coca-Cola</h4>
+								<h5>Lata 350 ml</h5>
+								<h6>R$ <span class="valor">4.90</span></h6>
+							</div>
+							<ion-icon name="checkmark-circle" class="check dkc1"></ion-icon>
+						</div> <!-- fim div single-selection -->
+						<div class="single-selection dk2" onclick="selectDrink('.dk2'); checkDrink('.dkc2')">
+							<div class="imagem">
+								<img src="media/kuat.jpg" / alt="Ilustração da bebida kuat">
+							</div>
+							<div class="text">
+								<h4>Kuat</h4>
+								<h5>Lata 350 ml</h5>
+								<h6>R$ <span class="valor">4.90</span></h6>
+							</div>
+							<ion-icon name="checkmark-circle" class="check dkc2"></ion-icon>
+						</div> <!-- fim div single-selection -->
+						<div class="single-selection dk3" onclick="selectDrink('.dk3'); checkDrink('.dkc3')">
+							<div class="imagem">
+								<img src="media/fanta-laranja.jpg" / alt="Ilustração da bebida fanta-laranja">
+							</div>
+							<div class="text">
+								<h4>Fanta Laranja</h4>
+								<h5>Lata 350 ml</h5>
+								<h6>R$ <span class="valor">4.90</span></h6>
+							</div>
+							<ion-icon name="checkmark-circle" class="check dkc3"></ion-icon>
+						</div> <!-- fim div single-selection -->
+						<div class="single-selection dk4" onclick="selectDrink('.dk4'); checkDrink('.dkc4')">
+							<div class="imagem">
+								<img src="media/fanta-uva.jpeg" / alt="Ilustração da bebida fanta-uva">
+							</div>
+							<div class="text">
+								<h4>Fanta Uva</h4>
+								<h5>Lata 350 ml</h5>
+								<h6>R$ <span class="valor">4.90</span></h6>
+							</div>
+							<ion-icon name="checkmark-circle" class="check dkc4"></ion-icon>
+						</div> <!-- fim div single-selection -->
+						<div class="single-selection dk5" onclick="selectDrink('.dk5'); checkDrink('.dkc5')">
+							<div class="imagem">
+								<img src="media/laranja.jpg" / alt="Ilustração da bebida Suco de laranja">
+							</div>
+							<div class="text">
+								<h4>Suco Laranja</h4>
+								<h5>Copo 300ml</h5>
+								<h6>R$ <span class="valor">5.90</span></h6>
+							</div>
+							<ion-icon name="checkmark-circle" class="check dkc5"></ion-icon>
+						</div> <!-- fim div single-selection -->
+						<div class="single-selection dk6" onclick="selectDrink('.dk6'); checkDrink('.dkc6')">
+							<div class="imagem">
+								<img src="media/morango-com-laranja.jpg" / alt="Ilustração da bebida suco de morango-com-laranja">
+							</div>
+							<div class="text">
+								<h4>Suco Morango com Laranja</h4>
+								<h5>Copo 300ml</h5>
+								<h6>R$ <span class="valor">7.90</span></h6>
+							</div>
+							<ion-icon name="checkmark-circle" class="check dkc6"></ion-icon>
+						</div> <!-- fim div single-selection -->
+					</div> <!-- fim div selection -->
+				</div> <!-- fim div drink -->
+				<div class="dessert">
+					<h3>Por fim, sua sobremesa</h3>
+					<div class="selection">
+						<div class="single-selection dss1" onclick="selectDessert('.dss1'); checkDessert('.dsc1')">
+							<div class="imagem">
+								<img src="media/pudim.png" / alt="Ilustração da sobremesa pudim">
+							</div>
+							<div class="text">
+								<h4>Pudim</h4>
+								<h5>Apenas pudim</h5>
+								<h6>R$ <span class="valor">7.90</span></h6>
+							</div>
+							<ion-icon name="checkmark-circle" class="check dsc1"></ion-icon>
+						</div> <!-- fim div single-selection -->
+						<div class="single-selection dss2" onclick="selectDessert('.dss2'); checkDessert('.dsc2')">
+							<div class="imagem">
+								<img src="media/brigadeiro-de-colher.jpg" / alt="Ilustração da sobremesa brigadeiro-de-colher">
+							</div>
+							<div class="text">
+								<h4>Brigadeiro de Colher</h4>
+								<h5>Apenas brigadeiro</h5>
+								<h6>R$ <span class="valor">5.90</span></h6>
+							</div>
+							<ion-icon name="checkmark-circle" class="check dsc2"></ion-icon>
+						</div> <!-- fim div single-selection -->
+						<div class="single-selection dss3" onclick="selectDessert('.dss3'); checkDessert('.dsc3')">
+							<div class="imagem">
+								<img src="media/sorvete-de-chocolate.jpeg" / alt="Ilustração da sobremesa sorvete-de-chocolate">
+							</div>
+							<div class="text">
+								<h4>Sorvete de Chocolate</h4>
+								<h5>2 bolas de sorvete</h5>
+								<h6>R$ <span class="valor">6.90</span></h6>
+							</div>
+							<ion-icon name="checkmark-circle" class="check dsc3"></ion-icon>
+						</div> <!-- fim div single-selection -->
+						<div class="single-selection dss4" onclick="selectDessert('.dss4'); checkDessert('.dsc4')">
+							<div class="imagem">
+								<img src="media/sorvete-de-baunilha.jpg" / alt="Ilustração da sobremesa sorvete-de-baunilha">
+							</div>
+							<div class="text">
+								<h4>Sorvete de Baunilha</h4>
+								<h5>2 bolas de sorvete</h5>
+								<h6>R$ <span class="valor">6.90</span></h6>
+							</div>
+							<ion-icon name="checkmark-circle" class="check dsc4"></ion-icon>
+						</div> <!-- fim div single-selection -->
+						<div class="single-selection dss5" onclick="selectDessert('.dss5'); checkDessert('.dsc5')">
+							<div class="imagem">
+								<img src="media/salada-de-frutas.jpg" / alt="Ilustração da sobremesa salada-de-frutas">
+							</div>
+							<div class="text">
+								<h4>Salada de Frutas</h4>
+								<h5>Banana, morango, uva e manga</h5>
+								<h6>R$ <span class="valor">7.90</span></h6>
+							</div>
+							<ion-icon name="checkmark-circle" class="check dsc5"></ion-icon>
+						</div> <!-- fim div single-selection -->
+					</div> <!-- fim div selection -->
+				</div> <!-- fim div dessert -->
+			</div> <!-- fim div main-content -->
+			<div class="bottom-menu">
+				<div onclick="endOrder()">
+					<h6 class="">Selecione os 3 itens para fechar o pedido</h6>
+				</div>
+			</div>
+		</div> <!-- fim div box -->
 
-      <div class="big-confirmation hide">
-         <div class="confirmation-box">
-            <h1>Confirme seu pedido</h1>
-            <div class="texto-confirmacao">
-               <span>Text</span>
-               <p>Valor</p>
-            </div>
-            <div class="bottom-confirmation">
-               <div class="check-order" onclick="fimPedido()">
-                  <h6 class="confirm-text">Tudo certo, pode pedir!</h6>
-               </div>
-               <div class="cancel-order" onclick="cancel()">
-                  <h6 class="confirm-text">Cancelar</h6>
-               </div>
-            </div>
-         </div>
-      </div>
+		<div class="big-confirmation hide">
+			<div class="confirmation-box">
+				<h1>Confirme seu pedido</h1>
+				<div class="texto-confirmacao">
+					<span>Text</span>
+					<p>Valor</p>
+				</div>
+				<div class="bottom-confirmation">
+					<div class="check-order" onclick="fimPedido()">
+						<h6 class="confirm-text">Tudo certo, pode pedir!</h6>
+					</div>
+					<div class="cancel-order" onclick="cancel()">
+						<h6 class="confirm-text">Cancelar</h6>
+					</div>
+				</div> <!-- fim div bottom-confirmation-->
+			</div> <!-- fim div confirmation-box -->
+		</div> <!-- fim div big-confirmation -->
 
-      <!--fim div box-->
-      <script src="script.js"></script>
-   </body>
+		<script src="script.js"></script>
+	</body>
 </html>
